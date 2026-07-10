@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HAL — Designer / Creator</title>
+<meta name="description" content="何者でもない、という余白。デザインとコードを独学で学びながら、ゲーム『REPAINT』をひとりでつくっているHALのポートフォリオ。">
+<meta property="og:title" content="I'm HAL — Designer / Creator">
+<meta property="og:description" content="何者でもない、という余白。デザインとコードを独学で学びながら、ゲーム『REPAINT』をひとりでつくっています。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://harlio011011-bit.github.io/hal-portfolio/">
+<meta property="og:image" content="https://harlio011011-bit.github.io/hal-portfolio/rain-abstract.jpg">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><line x1='28' y1='4' x2='19' y2='13' stroke='%231A1A1A' stroke-width='3.5' stroke-linecap='round'/><path d='M17 12 L20 15 Q16 24 4 28 Q8 16 17 12 Z' fill='%23F2611D'/></svg>">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{
+    font-family: 'DM Sans', 'Noto Sans JP', sans-serif;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><line x1='28' y1='4' x2='19' y2='13' stroke='%231A1A1A' stroke-width='3.5' stroke-linecap='round'/><path d='M17 12 L20 15 Q16 24 4 28 Q8 16 17 12 Z' fill='%23F2611D'/></svg>") 4 28, auto;
+  }
+
+  @media (pointer: coarse){
+    body{ cursor: auto; }
+  }
+
+  .hero-cursor-area{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow{
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(242,97,29,0.12) 0%, rgba(242,97,29,0) 70%);
+    pointer-events: none;
+    display: none;
+    z-index: 0;
+  }
+  .hero-glow.active{ display: block; }
+
+  @media (pointer: coarse){
+    .hero-glow{ display: none !important; }
+  }
+</style>
+</head>
+<body class="min-h-screen" style="background:#FAFAFA; color:#1A1A1A;">
+
+<!-- color swatch strip — the one accent signature on an otherwise grayscale page -->
+<div class="fixed top-0 inset-x-0 z-50 flex h-1">
+  <span class="flex-1" style="background:#F2611D;"></span>
+  <span class="flex-1" style="background:#15179C;"></span>
+  <span class="flex-1" style="background:#11514C;"></span>
+  <span class="flex-1" style="background:#F3A89B;"></span>
+</div>
+
+<header class="fixed top-1 inset-x-0 z-40 px-6 py-5 flex justify-between items-center">
+  <a href="#hero" class="text-sm tracking-[0.25em] uppercase font-bold">HAL</a>
+  <nav class="flex gap-8">
+    <a href="#work" class="text-sm hover:opacity-60 transition-opacity">Now</a>
+    <a href="#about" class="text-sm hover:opacity-60 transition-opacity">About</a>
+    <a href="#contact" class="text-sm hover:opacity-60 transition-opacity">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="hero-glow" id="heroGlow"></div>
+
+  <section id="hero" class="hero-cursor-area flex flex-col justify-center items-center text-center px-6" style="min-height:100vh;">
+    <p class="relative text-xs tracking-[0.3em] uppercase mb-5" style="color:#999;">Designer / Creator — in progress</p>
+    <h1 class="relative text-5xl md:text-6xl font-bold tracking-tight">I'm HAL</h1>
+    <p class="relative mt-6 max-w-md text-base leading-relaxed" style="color:#444;">何者でもない、という余白。</p>
+    <p class="relative mt-14 text-xs tracking-[0.2em] uppercase" style="color:#bbb;">↓ scroll</p>
+  </section>
+
+  <section id="work" class="px-6 py-24 max-w-5xl mx-auto">
+    <p class="text-center text-xs tracking-[0.3em] uppercase font-medium mb-16">Now</p>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+      <div class="project-card">
+        <div class="overflow-hidden rounded-sm aspect-[4/5]" style="background:#F2F0EA;">
+          <svg viewBox="0 0 320 400" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs><clipPath id="diagR"><polygon points="0,0 320,0 0,400"/></clipPath></defs>
+            <rect width="320" height="400" fill="#F2F0EA"/>
+            <g clip-path="url(#diagR)">
+              <rect width="320" height="400" fill="#EFEDE7"/>
+              <g fill="#9a9a93">
+                <circle cx="50" cy="60" r="4"/><circle cx="90" cy="110" r="3.5"/>
+                <circle cx="35" cy="150" r="4"/><circle cx="120" cy="50" r="3.5"/>
+                <circle cx="75" cy="190" r="4"/><circle cx="20" cy="230" r="3.5"/>
+              </g>
+            </g>
+            <polygon points="320,0 320,400 0,400" fill="#F6F1E7"/>
+            <g fill="#F3A89B" opacity="0.9">
+              <circle cx="230" cy="260" r="4"/><circle cx="265" cy="220" r="3.5"/><circle cx="285" cy="280" r="4"/>
+            </g>
+            <g fill="#15179C"><circle cx="200" cy="220" r="3.5"/><circle cx="245" cy="180" r="3.5"/></g>
+            <g fill="#11514C"><circle cx="215" cy="290" r="3.5"/><circle cx="270" cy="170" r="3.5"/></g>
+            <line x1="0" y1="0" x2="320" y2="400" stroke="#1A1A1A" stroke-width="1.6" opacity="0.15"/>
+            <g transform="translate(140,160) rotate(40)">
+              <rect x="-3" y="-36" width="6" height="32" rx="2" fill="#3a3a3d"/>
+              <path d="M-7 -6 H7 L5 13 Q0 22 -5 13 Z" fill="#F2611D"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-3 mb-4 flex-wrap">
+          <h3 class="text-xl font-bold">REPAINT</h3>
+          <span class="text-[10px] uppercase tracking-wider rounded-full px-2.5 py-0.5" style="border:1px solid #F2611D; color:#C04B14;">in development</span>
+        </div>
+        <p class="text-sm leading-relaxed mb-3" style="color:#444;">世界はモノクロの写真のように始まる。プレイヤーは巨大な絵筆やペンキ缶を使って、自分の手で景色に色を足していく。色を塗り続けていると、ときどき巨大な手が現れて——それを止めにくる。</p>
+        <p class="text-sm leading-relaxed mb-6" style="color:#444;">ひとりで企画・設計・実装まで進めている自主制作です。コードを学ぶための練習でもあり、自分の作りたい世界観を確かめるための実験でもあります。</p>
+        <div class="flex flex-wrap gap-2 mb-7">
+          <span class="text-[11px] uppercase tracking-wide rounded-full px-3 py-1" style="border:1px solid #E5E5E0; color:#999;">HTML / CSS / JS</span>
+          <span class="text-[11px] uppercase tracking-wide rounded-full px-3 py-1" style="border:1px solid #E5E5E0; color:#999;">game design</span>
+          <span class="text-[11px] uppercase tracking-wide rounded-full px-3 py-1" style="border:1px solid #E5E5E0; color:#999;">self-taught</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-sm rounded-sm px-5 py-2.5" style="border:1px dashed #bbb; color:#999;">
+            プレイアブル版は近日公開
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs tracking-[0.25em] uppercase mb-8" style="color:#999;">Sketchbook</p>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      <article class="project-card">
+        <div class="overflow-hidden rounded-sm aspect-[4/5]" style="background:#F2F0EA;">
+          <svg viewBox="0 0 100 100" class="w-full h-full">
+            <rect x="10" y="60" width="14" height="30" fill="#F2611D"/>
+            <rect x="30" y="40" width="14" height="50" fill="#15179C"/>
+            <rect x="50" y="55" width="14" height="35" fill="#11514C"/>
+            <rect x="70" y="25" width="14" height="65" fill="#3a3a3d"/>
+          </svg>
+        </div>
+        <h4 class="mt-4 text-sm font-medium">Color Palette Study</h4>
+        <p class="mt-1 text-xs" style="color:#999;">color study</p>
+      </article>
+
+      <article class="project-card">
+        <div class="overflow-hidden rounded-sm aspect-[4/5]" style="background:#F2F0EA;">
+          <svg viewBox="0 0 100 100" class="w-full h-full">
+            <circle cx="50" cy="35" r="22" fill="#F6F1E7" stroke="#1A1A1A" stroke-width="3"/>
+            <rect x="20" y="55" width="60" height="6" fill="#1A1A1A"/>
+            <rect x="44" y="61" width="12" height="28" fill="#F3A89B"/>
+          </svg>
+        </div>
+        <h4 class="mt-4 text-sm font-medium">Line Art Character</h4>
+        <p class="mt-1 text-xs" style="color:#999;">character study</p>
+      </article>
+
+      <article class="project-card">
+        <div class="overflow-hidden rounded-sm aspect-[4/5]" style="background:#F2F0EA;">
+          <svg viewBox="0 0 100 100" class="w-full h-full">
+            <rect x="10" y="10" width="80" height="80" rx="6" fill="none" stroke="#DEDBD3" stroke-width="2"/>
+            <rect x="20" y="20" width="60" height="14" fill="#1A1A1A"/>
+            <rect x="20" y="42" width="36" height="10" fill="#F2611D"/>
+            <rect x="20" y="58" width="50" height="10" fill="#11514C"/>
+          </svg>
+        </div>
+        <h4 class="mt-4 text-sm font-medium">UI Layout Exercise</h4>
+        <p class="mt-1 text-xs" style="color:#999;">interface</p>
+      </article>
+
+      <article class="project-card">
+        <div class="overflow-hidden rounded-sm aspect-[4/5]" style="background:#F2F0EA;">
+          <svg viewBox="0 0 100 100" class="w-full h-full">
+            <path d="M10 70 Q50 20 90 70" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+            <circle cx="50" cy="46" r="8" fill="#15179C"/>
+            <circle cx="30" cy="68" r="4" fill="#F3A89B"/>
+            <circle cx="70" cy="68" r="4" fill="#11514C"/>
+          </svg>
+        </div>
+        <h4 class="mt-4 text-sm font-medium">Banner Motif</h4>
+        <p class="mt-1 text-xs" style="color:#999;">brand study</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="px-6 py-24 max-w-2xl mx-auto" style="border-top:1px solid #EEE;">
+    <p class="text-center text-xs tracking-[0.3em] uppercase mb-10" style="color:#999;">About</p>
+    <div class="space-y-5 text-[15px] leading-relaxed" style="color:#444;">
+      <p>『あつまれ どうぶつの森』や『Subnautica』のように、自分の歩幅で世界を発見していくゲームに惹かれてきました。心を動かすのは派手な演出ではなく、小さな違和感と発見が静かに積み重なっていく時間です。</p>
+      <p>日常のものがひとつ、あり得ない大きさで風景に置かれる——そんなシュルレアリスムのコラージュも好きです。見慣れたもののスケールを少しずらすだけで、世界は違う顔を見せる。その「見え方の設計」に、自分のデザインの原点があると考えています。</p>
+      <p>いまは独学でデザインとコードを学びながら、構想をひとりで動くかたちにすることを繰り返しています。目指すのは、いつか自分のスタジオを構え、ふと手を伸ばしたくなるものをつくり続けること。このページは、そこへ向かう歩みの記録です。</p>
+    </div>
+  </section>
+
+  <section id="skills" class="px-6 py-24 max-w-4xl mx-auto" style="border-top:1px solid #EEE;">
+    <p class="text-center text-xs tracking-[0.3em] uppercase mb-14" style="color:#999;">Skills</p>
+    <div class="grid sm:grid-cols-3 gap-10 text-center sm:text-left">
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#999;">Design</h4>
+        <ul class="space-y-2 text-sm" style="color:#444;">
+          <li>世界観・コンセプト設計</li>
+          <li>コピー・トーンの言語化</li>
+          <li>UI / ゲームUIのディレクション</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#999;">Make</h4>
+        <ul class="space-y-2 text-sm" style="color:#444;">
+          <li>AIを活用したプロトタイピング(本サイト・REPAINT)</li>
+          <li>HTML / CSS の基礎(CS50で学習)</li>
+          <li>GitHub Pages でのサイト公開・運用</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#999;">Now learning</h4>
+        <ul class="space-y-2 text-sm" style="color:#444;">
+          <li>JavaScript を自力で書く力</li>
+          <li>Figma での画面設計</li>
+          <li>ゲームの状態管理・セーブ設計</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="px-6 py-24 text-center" style="border-top:1px solid #EEE;">
+    <p class="text-xs tracking-[0.3em] uppercase mb-4" style="color:#999;">Contact</p>
+    <p class="text-sm" style="color:#666;">ご連絡は、お伝えしている連絡先までお願いいたします。</p>
+  </section>
+
+</main>
+
+<footer class="px-6 py-8 text-center">
+  <p class="text-xs tracking-wide" style="color:#aaa;">© 2026 HAL. Built from scratch.</p>
+</footer>
+
+<script>
+  (function(){
+    var glow = document.getElementById('heroGlow');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+    if(!glow || reduceMotion || coarsePointer) return;
+
+    document.addEventListener('mousemove', function(e){
+      glow.classList.add('active');
+      glow.style.left = (e.clientX - 110) + 'px';
+      glow.style.top = (e.clientY - 110) + 'px';
+    });
+
+    document.addEventListener('mouseleave', function(){
+      glow.classList.remove('active');
+    });
+  })();
+</script>
+
+<script data-goatcounter="https://halio.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
